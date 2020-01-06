@@ -4,8 +4,6 @@
 <html><head>
 <title>QUINN C. MARTIN - COMEDIAN & ACTOR</title>
 <style>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
 	ul {
   list-style-type: none;
   margin: 0;
@@ -64,8 +62,8 @@
       // a successful payment.
       // Instead use one of the strategies described in
       // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: window.location.protocol + '//deadcomedyshow.com/success',
-      cancelUrl: window.location.protocol + '//deadcomedyshow.com/canceled',
+      successUrl: window.location.protocol + '//deadcomedyshow.com',
+      cancelUrl: window.location.protocol + '//deadcomedyshow.com',
     })
     .then(function (result) {
       if (result.error) {
@@ -77,15 +75,10 @@
     });
   });
 })();
-</script>	
-	
+</script>
 	
 </center>
 	
-	
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 
 </body>
 </html>
