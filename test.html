@@ -51,7 +51,7 @@
   id="checkout-button-sku_GUkp8r3WkOBrs3"
   role="link"
 >
-  Checkout: One Ticket
+  Date Night
 </button>
 
 <div id="error-message"></div>
@@ -94,15 +94,16 @@
 	<td style="text-align:center">
 	
 	
-	
-	
-	<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+	<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
 <button
   style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  id="checkout-button-sku_GUkp8r3WkOBrs3"
+  id="checkout-button-sku_GZWF8PYOPanfEJ"
   role="link"
 >
-  Checkout: Two Tickets
+  Checkout
 </button>
 
 <div id="error-message"></div>
@@ -111,20 +112,20 @@
 (function() {
   var stripe = Stripe('pk_live_QcpLJJ7SoSax0zABjsswltfg00pOT2uOj6');
 
-  var checkoutButton = document.getElementById('checkout-button-sku_GUkp8r3WkOBrs3');
+  var checkoutButton = document.getElementById('checkout-button-sku_GZWF8PYOPanfEJ');
   checkoutButton.addEventListener('click', function () {
     // When the customer clicks on the button, redirect
     // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{sku: 'sku_GUkp8r3WkOBrs3', quantity: 1}],
+      items: [{sku: 'sku_GZWF8PYOPanfEJ', quantity: 1}],
 
       // Do not rely on the redirect to the successUrl for fulfilling
       // purchases, customers may not always reach the success_url after
       // a successful payment.
       // Instead use one of the strategies described in
       // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: window.location.protocol + '//deadcomedyshow.com',
-      cancelUrl: window.location.protocol + '//deadcomedyshow.com',
+      successUrl: window.location.protocol + '//deadcomedyshow.com/success',
+      cancelUrl: window.location.protocol + '//deadcomedyshow.com/canceled',
     })
     .then(function (result) {
       if (result.error) {
@@ -137,8 +138,6 @@
   });
 })();
 </script>
-	
-	
 	
 	
 	</td>
@@ -146,15 +145,16 @@
 	<td width = "33%" style="text-align:center">
 	
 	
-	
-	
-	<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+	<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
 <button
   style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  id="checkout-button-sku_GUkp8r3WkOBrs3"
+  id="checkout-button-sku_GZWGc44QlmGg03"
   role="link"
 >
-  Checkout: Booth for Five
+  Booth For Five
 </button>
 
 <div id="error-message"></div>
@@ -163,20 +163,20 @@
 (function() {
   var stripe = Stripe('pk_live_QcpLJJ7SoSax0zABjsswltfg00pOT2uOj6');
 
-  var checkoutButton = document.getElementById('checkout-button-sku_GUkp8r3WkOBrs3');
+  var checkoutButton = document.getElementById('checkout-button-sku_GZWGc44QlmGg03');
   checkoutButton.addEventListener('click', function () {
     // When the customer clicks on the button, redirect
     // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{sku: 'sku_GUkp8r3WkOBrs3', quantity: 1}],
+      items: [{sku: 'sku_GZWGc44QlmGg03', quantity: 1}],
 
       // Do not rely on the redirect to the successUrl for fulfilling
       // purchases, customers may not always reach the success_url after
       // a successful payment.
       // Instead use one of the strategies described in
       // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: window.location.protocol + '//deadcomedyshow.com',
-      cancelUrl: window.location.protocol + '//deadcomedyshow.com',
+      successUrl: window.location.protocol + '//deadcomedyshow.com/success',
+      cancelUrl: window.location.protocol + '//deadcomedyshow.com/canceled',
     })
     .then(function (result) {
       if (result.error) {
@@ -189,8 +189,6 @@
   });
 })();
 </script>
-	
-	
 	
 	
 	</td>
