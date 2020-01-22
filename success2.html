@@ -1,0 +1,277 @@
+
+  
+<!DOCTYPE html>
+<html><head>
+<title>GET YOUR TICKETS TO DEADCOMEDYSHOW</title>
+<style>
+	ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+ 
+.item {
+  width: 100%;
+} 
+  
+</style>
+
+</head>
+
+  
+<body>  
+	
+
+<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+	
+  <div>
+   <img width = "100%" src="https://i.imgur.com/iQvgR4A.png">
+</div>	
+	
+  <div>
+   <img width = "100%" src="https://i.imgur.com/Dg8qn6I.jpg">
+</div>
+  
+
+<center>
+
+	
+<table width = "100%">
+
+<tr>
+	
+	
+	
+	
+	
+	<td style="text-align:center">
+	
+		
+		
+	<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+<button
+  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+  id="checkout-button-sku_GZWEeKvGvDHAVd"
+  role="link"
+>
+  One Ticket
+</button>
+
+<div id="error-message"></div>
+
+<script>
+(function() {
+  var stripe = Stripe('pk_live_QcpLJJ7SoSax0zABjsswltfg00pOT2uOj6');
+
+  var checkoutButton = document.getElementById('checkout-button-sku_GZWEeKvGvDHAVd');
+  checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_GZWEeKvGvDHAVd', quantity: 1}],
+
+      // Do not rely on the redirect to the successUrl for fulfilling
+      // purchases, customers may not always reach the success_url after
+      // a successful payment.
+      // Instead use one of the strategies described in
+      // https://stripe.com/docs/payments/checkout/fulfillment
+      successUrl: window.location.protocol + '//deadcomedyshow.com',
+      cancelUrl: window.location.protocol + '//deadcomedyshow.com',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>	
+		
+		
+		
+	
+	</td>
+	
+	
+	
+	
+	
+	
+	<td style="text-align:center">
+	
+		
+		
+	<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+<button
+  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+  id="checkout-button-sku_GZWF8PYOPanfEJ"
+  role="link"
+>
+  Two Tickets
+</button>
+
+<div id="error-message"></div>
+
+<script>
+(function() {
+  var stripe = Stripe('pk_live_QcpLJJ7SoSax0zABjsswltfg00pOT2uOj6');
+
+  var checkoutButton = document.getElementById('checkout-button-sku_GZWF8PYOPanfEJ');
+  checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_GZWF8PYOPanfEJ', quantity: 1}],
+
+      // Do not rely on the redirect to the successUrl for fulfilling
+      // purchases, customers may not always reach the success_url after
+      // a successful payment.
+      // Instead use one of the strategies described in
+      // https://stripe.com/docs/payments/checkout/fulfillment
+      successUrl: window.location.protocol + '//deadcomedyshow.com',
+      cancelUrl: window.location.protocol + '//deadcomedyshow.com',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>	
+		
+		
+	
+	</td>
+	
+	<td style="text-align:center">
+	<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+<button
+  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+  id="checkout-button-sku_GabLayEYyKbcCf"
+  role="link"
+>
+  Three Tickets
+</button>
+
+<div id="error-message"></div>
+
+<script>
+(function() {
+  var stripe = Stripe('pk_live_QcpLJJ7SoSax0zABjsswltfg00pOT2uOj6');
+
+  var checkoutButton = document.getElementById('checkout-button-sku_GabLayEYyKbcCf');
+  checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_GabLayEYyKbcCf', quantity: 1}],
+
+      // Do not rely on the redirect to the successUrl for fulfilling
+      // purchases, customers may not always reach the success_url after
+      // a successful payment.
+      // Instead use one of the strategies described in
+      // https://stripe.com/docs/payments/checkout/fulfillment
+      successUrl: window.location.protocol + '//deadcomedyshow.com',
+      cancelUrl: window.location.protocol + '//deadcomedyshow.com',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
+	</td>
+	
+	<td width = "33%" style="text-align:center">
+	
+	
+		
+	<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+<button
+  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+  id="checkout-button-sku_GZWGc44QlmGg03"
+  role="link"
+>
+  Four Tickets
+</button>
+
+<div id="error-message"></div>
+
+<script>
+(function() {
+  var stripe = Stripe('pk_live_QcpLJJ7SoSax0zABjsswltfg00pOT2uOj6');
+
+  var checkoutButton = document.getElementById('checkout-button-sku_GZWGc44QlmGg03');
+  checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_GZWGc44QlmGg03', quantity: 1}],
+
+      // Do not rely on the redirect to the successUrl for fulfilling
+      // purchases, customers may not always reach the success_url after
+      // a successful payment.
+      // Instead use one of the strategies described in
+      // https://stripe.com/docs/payments/checkout/fulfillment
+      successUrl: window.location.protocol + '//deadcomedyshow.com',
+      cancelUrl: window.location.protocol + '//deadcomedyshow.com',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>	
+		
+			
+	</td>
+	
+	
+	
+	
+	
+	
+	
+</tr>
+</table>
+	
+</center>
+	
+
+</body>
+</html>
